@@ -1,99 +1,16 @@
 # Autores: Gustavo Rodrigues, 
 
-Mini Projeto: Demonstrando CSS ModulesEste repositório contém o código-fonte de um mini projeto desenvolvido para a disciplina de Desenvolvimento WEB, com o objetivo de demonstrar na prática o funcionamento e os benefícios dos CSS Modules.🎯 Descrição do ObjetivoO objetivo deste projeto é ilustrar como os CSS Modules resolvem o problema de conflito de estilos em CSS, criando escopos locais para as classes. Para isso, criamos dois componentes de botão distintos que, intencionalmente, utilizam o mesmo nome de classe (.button) em seus respectivos arquivos de estilo. A aplicação demonstrará que, graças aos CSS Modules, os estilos de um não interferem no outro.🛠️ Instalação dos Softwares NecessáriosPara replicar este projeto, você precisará ter os seguintes softwares instalados em sua máquina:Node.js: Essencial para rodar o ambiente de desenvolvimento. Ele já vem com o npm (gerenciador de pacotes).Baixe o Node.js aqui (recomenda-se a versão LTS).Editor de Código: Qualquer editor de sua preferência.VS Code é uma excelente recomendação.🚀 Passo-a-Passo para o DesenvolvimentoSiga os passos abaixo para criar o projeto do zero.1. Criar o Projeto ReactAbra seu terminal e execute o comando abaixo para criar um novo projeto React com o create-react-app.c
+Este tutorial é um guia passo a passo para criar um mini projeto em React que demonstra o principal benefício dos CSS Modules: resolver conflitos de estilo.
 
-Acesse a pasta do projeto:cd css-modules-demo
+O resumo é o seguinte:
 
-2. Estruturar as PastasDentro da pasta src, crie uma nova pasta chamada components. É aqui que nossos componentes reutilizáveis irão ficar./src
-  /components
-  App.css
-  App.js
-  ...
+Objetivo: Provar que os CSS Modules criam um "escopo local" para os estilos, evitando que o CSS de um componente afete o outro.
 
-3. Criar o Componente PrimaryButtonDentro de src/components, crie uma pasta PrimaryButton.Dentro de PrimaryButton, crie dois arquivos: PrimaryButton.js e PrimaryButton.module.css.PrimaryButton.module.css (Adicione o CSS do botão primário)/* Note o nome do arquivo com .module.css */
-.button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  margin: 10px;
-}
+Método: O tutorial ensina a criar dois componentes de botão (PrimaryButton e DangerButton). Intencionalmente, ambos os botões são estilizados com a mesma classe (.button) em seus respectivos arquivos de estilo (.module.css).
 
-.button:hover {
-  background-color: #0056b3;
-}
+Resultado: Ao rodar a aplicação, os dois botões aparecem com seus estilos corretos e distintos (um azul e um vermelho). Isso acontece porque os CSS Modules renomeiam as classes automaticamente nos bastidores, garantindo que elas sejam únicas e não entrem em conflito, mesmo que o desenvolvedor tenha usado o mesmo nome.
 
-PrimaryButton.js (Crie o componente React)import React from 'react';
-// Importe o CSS Module. O 'styles' é um objeto.
-import styles from './PrimaryButton.module.css';
-
-function PrimaryButton({ children }) {
-  // Use a classe do objeto 'styles'
-  return (
-    <button className={styles.button}>
-      {children}
-    </button>
-  );
-}
-
-export default PrimaryButton;
-
-4. Criar o Componente DangerButtonDentro de src/components, crie uma pasta DangerButton.Dentro dela, crie os arquivos: DangerButton.js e DangerButton.module.css.DangerButton.module.css (Adicione o CSS do botão de perigo. Note que usamos a mesma classe .button!).button {
-  background-color: #dc3545;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  margin: 10px;
-}
-
-.button:hover {
-  background-color: #c82333;
-}
-
-DangerButton.js (Crie o componente React)import React from 'react';
-import styles from './DangerButton.module.css';
-
-function DangerButton({ children }) {
-  // A classe .button aqui será mapeada para o CSS do DangerButton
-  return (
-    <button className={styles.button}>
-      {children}
-    </button>
-  );
-}
-
-export default DangerButton;
-
-5. Usar os Componentes no App PrincipalAgora, vamos editar o arquivo src/App.js para usar os dois botões que criamos.import React from 'react';
-import PrimaryButton from './components/PrimaryButton/PrimaryButton';
-import DangerButton from './components/DangerButton/DangerButton';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Demonstração de CSS Modules</h1>
-        <p>
-          Ambos os botões foram estilizados com a classe <code>.button</code>,
-          mas seus estilos não entram em conflito.
-        </p>
-        <div>
-          <PrimaryButton>Botão Primário</PrimaryButton>
-          <DangerButton>Botão de Perigo</DangerButton>
-        </div>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+Em suma, é um exercício prático para visualizar como os CSS Modules garantem que os estilos de um componente fiquem "trancados" dentro dele.
 
 6. Rodar a AplicaçãoNo terminal, na raiz do projeto, execute:npm start
 
