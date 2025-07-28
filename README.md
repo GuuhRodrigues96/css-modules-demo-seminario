@@ -1,17 +1,74 @@
-# Autores: Gustavo Rodrigues, Jefferson Eduardo, Victor Martins, 
+````markdown
+# Demonstração de CSS Modules em React
 
-Este tutorial é um guia passo a passo para criar um mini projeto em React que demonstra o principal benefício dos CSS Modules: resolver conflitos de estilo.
+**Autores:** Gustavo Rodrigues, Jefferson Eduardo, Victor Martins
 
-O resumo é o seguinte:
+---
 
-Objetivo: Provar que os CSS Modules criam um "escopo local" para os estilos, evitando que o CSS de um componente afete o outro.
+## 📋 Descrição
 
-Método: O tutorial ensina a criar dois componentes de botão (PrimaryButton e DangerButton). Intencionalmente, ambos os botões são estilizados com a mesma classe (.button) em seus respectivos arquivos de estilo (.module.css).
+Este projeto é um guia prático e uma demonstração visual do principal benefício dos **CSS Modules** em React: isolar estilos de componentes para evitar conflitos de CSS globais, mesmo quando nomes de classes são idênticos.
 
-Resultado: Ao rodar a aplicação, os dois botões aparecem com seus estilos corretos e distintos (um azul e um vermelho). Isso acontece porque os CSS Modules renomeiam as classes automaticamente nos bastidores, garantindo que elas sejam únicas e não entrem em conflito, mesmo que o desenvolvedor tenha usado o mesmo nome.
+---
 
-Em suma, é um exercício prático para visualizar como os CSS Modules garantem que os estilos de um componente fiquem "trancados" dentro dele.
+## 🎯 Objetivo
 
-6. Rodar a AplicaçãoNo terminal, na raiz do projeto, execute:npm start
+Provar que os CSS Modules criam um **escopo local** para os estilos, garantindo que o CSS de um componente **não afete** o outro.
 
-Seu navegador abrirá em http://localhost:3000 e você verá os dois botões, cada um com seu estilo correto.🖼️ Imagens para Ilustrar (Resultados)Resultado Final na Tela:(Aqui você deve colocar um print da tela do navegador mostrando os dois botões lado a lado, um azul e um vermelho).Inspeção no Navegador (A Prova):(Aqui você deve colocar um print da ferramenta de desenvolvedor do navegador, inspecionando um dos botões e destacando o nome da classe com hash).Este resultado comprova que os CSS Modules geraram nomes de classe únicos para cada componente, evitando qualquer colisão de estilos.
+---
+
+## ✅ Resultado Esperado
+
+* Ao executar a aplicação, **dois botões** aparecem lado a lado:
+
+  * Um **azul** (PrimaryButton)
+  * Um **vermelho** (DangerButton)
+
+* **Sem conflitos** visuais, embora ambos tenham `.button` como nome de classe.
+
+---
+
+## ✨ Tecnologias Utilizadas
+
+* **React**
+* **Create React App** (configuração zero-config)
+* **CSS Modules** (escopo local de estilos)
+* **TypeScript** (opcional)
+
+---
+
+## 🚀 Como Executar
+
+1. **Clone o repositório**
+
+   ```bash
+   git clone https://github.com/GuuhRodrigues96/css-modules-demo-seminario.git
+   ```
+2. **Acesse a pasta do projeto**
+
+   ```bash
+   cd css-modules-demo-seminario/css-modules-demo
+   ```
+3. **Instale as dependências**
+
+   ```bash
+   npm install
+   ```
+4. **Inicie a aplicação**
+
+   ```bash
+   npm start
+   ```
+5. **Abra no navegador**
+   Acesse [http://localhost:3000](http://localhost:3000) e veja os botões renderizados.
+
+---
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a [MIT License](LICENSE).
+
+```
+```
