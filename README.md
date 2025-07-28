@@ -7,7 +7,7 @@ Um mini projeto prático que demonstra o principal benefício dos **CSS Modules*
 
 -----
 
-## 📋 Sobre o Projeto
+## Sobre o Projeto
 
 O objetivo deste repositório é provar visualmente como os CSS Modules criam um **escopo local** para os estilos. Isso garante que as classes CSS de um componente não afetem acidentalmente os estilos de outro, mesmo que os nomes das classes sejam idênticos.
 
@@ -18,17 +18,17 @@ Para isso, o projeto contém dois componentes de botão:
 
 Ambos foram intencionalmente estilizados com a mesma classe (`.button`) em seus respectivos arquivos `.module.css`.
 
-### ✅ O Resultado
+### O Resultado
 
 Ao executar a aplicação, os dois botões aparecem com seus estilos corretos e distintos, sem nenhum conflito visual. Isso ocorre porque os CSS Modules geram nomes de classe únicos nos bastidores (ex: `PrimaryButton_button__a1b2c`), provando o isolamento dos estilos.
 
-## ✨ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
   * **React**
   * **Create React App**
   * **CSS Modules**
 
-## 🚀 Como Executar o Projeto
+## Como Executar o Projeto
 
 Siga os passos abaixo para rodar a demonstração em sua máquina.
 
