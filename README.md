@@ -1,8 +1,3 @@
-Você tem razão. A versão anterior ainda podia ser mais clara e seguir um padrão mais convencional para projetos no GitHub.
-
-Aqui está uma versão reorganizada, com uma estrutura mais limpa, seções bem definidas e formatação consistente. Ela foi projetada para ser lida de cima para baixo de forma lógica e intuitiva.
-
------
 
 # Demonstração de CSS Modules em React
 
