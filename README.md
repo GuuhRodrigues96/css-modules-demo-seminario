@@ -1,4 +1,4 @@
-# Autores: Gustavo Rodrigues, Victor Martins, 
+# Autores: Gustavo Rodrigues, Jefferson Eduardo, Victor Martins, 
 
 Este tutorial é um guia passo a passo para criar um mini projeto em React que demonstra o principal benefício dos CSS Modules: resolver conflitos de estilo.
 
