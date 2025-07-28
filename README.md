@@ -3,7 +3,8 @@
 
 Um mini projeto prático que demonstra o principal benefício dos **CSS Modules**: o isolamento de estilos para evitar conflitos em aplicações React.
 
-**Autores:** Gustavo Rodrigues, Jefferson Eduardo, Victor Martins.
+**Autores:** Gustavo Rodrigues, Jefferson Eduardo, Victor Martins, Mateus Martins Peres.
+
 
 -----
 
